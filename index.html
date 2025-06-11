@@ -4,12 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ale Solano Piercing</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Inter:wght@400&display=swap" rel="stylesheet">
   <style>
+    /* Importación de RosveliT para "Ale Solano" */
+    @font-face {
+      font-family: "RosveliT";
+      src: url("https://files.fontsme.com/r/675/22675/file/rosvelit-regular.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+
     body {
-      font-family: 'Inter', system-ui, sans-serif;
-      background-color: #fdfcfa; /* blanco suave */
-      color: #1e1e1e; /* gris oscuro */
+      font-family: system-ui, sans-serif;
+      background-color: #fdfcfa;
+      color: #1e1e1e;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -25,14 +32,13 @@
     }
 
     .branding .nombre {
-      font-family: 'Playfair Display', serif;
-      font-style: italic;
-      font-size: 2rem;
-      line-height: 1.2;
+      font-family: "RosveliT", serif;
+      font-size: 2.2rem;
+      line-height: 1.1;
     }
 
     .branding .subtitulo {
-      font-family: 'Inter', sans-serif;
+      font-family: system-ui, sans-serif;
       font-size: 1rem;
       letter-spacing: 1px;
       margin-top: 0.2rem;
@@ -72,11 +78,11 @@
       padding: 12px 24px;
       font-size: 1rem;
       border-radius: 8px;
-      background-color: #1e1e1e; /* fondo oscuro */
-      color: #f4ede8; /* texto claro */
+      background-color: #1e1e1e; /* oscuro */
+      color: #f4ede8; /* claro */
       border: none;
       text-decoration: none;
-      transition: all 0.3s ease;
+      transition: background 0.3s ease;
     }
 
     .link-button:hover {
@@ -86,7 +92,7 @@
 </head>
 <body>
   <div class="branding">
-    <div class="nombre">Ale Solano</div>
+    <div class="nombre">Ale Solano</div>
     <div class="subtitulo">Piercing</div>
   </div>
 
