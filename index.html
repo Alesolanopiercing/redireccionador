@@ -5,10 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Acceso al sitio</title>
   <style>
+    :root {
+      --fondo: #1e1e1e; /* gris oscuro */
+      --texto: #f4ede8; /* beige claro */
+    }
+
     body {
       font-family: system-ui, sans-serif;
-      background-color: #fdfdfd;
-      color: #1e1e1e;
+      background-color: var(--fondo);
+      color: var(--texto);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -17,49 +22,56 @@
       margin: auto;
       text-align: left;
     }
+
     h1 {
       text-align: center;
       margin-bottom: 1rem;
       font-size: 1.8rem;
     }
+
     p {
       margin-bottom: 1.5rem;
       font-size: 1rem;
       line-height: 1.6;
     }
+
     ol {
       padding-left: 1.2rem;
     }
+
     li {
       margin-bottom: 1rem;
       font-size: 1rem;
     }
+
     .link-button {
       margin-top: 2rem;
       display: inline-block;
       padding: 12px 24px;
       font-size: 1rem;
       border-radius: 8px;
-      background-color: #000;
-      color: white;
+      background-color: var(--texto); /* beige claro */
+      color: var(--fondo); /* gris oscuro */
+      border: none;
       text-decoration: none;
       transition: background 0.3s ease;
     }
+
     .link-button:hover {
-      background-color: #333;
+      background-color: #e0d7cf;
     }
   </style>
 </head>
 <body>
-  <h1>¿No podés acceder al sitio?</h1>
+  <h1>Abre esta página desde tu navegador!</h1>
 
-  <p>La página que intentás abrir no funciona correctamente dentro del navegador interno de Instagram. Para poder acceder al contenido sin restricciones, seguí estos pasos:</p>
+  <p>La página que intentas abrir no funciona correctamente dentro del navegador interno de Instagram. Para poder acceder al contenido sin restricciones, sigue estos pasos:</p>
 
   <ol>
-    <li>Tocá los <strong>tres puntos</strong> en la esquina superior derecha de esta pantalla.</li>
-    <li>Seleccioná la opción que dice <strong>"Abrir en Chrome"</strong> o <strong>"Abrir en el navegador"</strong>.</li>
+    <li>Toca los <strong>tres puntos</strong> en la esquina superior derecha de esta pantalla.</li>
+    <li>Selecciona la opción que dice <strong>"Abrir en Chrome"</strong> o <strong>"Abrir en el navegador"</strong>.</li>
     <li>Tu navegador predeterminado se abrirá fuera de Instagram.</li>
-    <li>Una vez abierto, tocá el botón <strong>"Acceder al sitio"</strong> para continuar.</li>
+    <li>Una vez abierto, toca el botón <strong>"Acceder al sitio"</strong> para continuar.</li>
   </ol>
 
   <a class="link-button" href="https://loyl.me/alesolano" target="_blank">
