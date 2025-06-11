@@ -1,45 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Ale Solano Piercing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      font-family: system-ui, sans-serif;
+      margin: 0;
+      background-color: #0e0e0e;
+      color: #f5e8d8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       height: 100vh;
-      background-color: #fff;
       text-align: center;
-      padding: 20px;
     }
-    h1 {
-      font-size: 1.5rem;
+
+    .logo {
+      max-width: 160px;
       margin-bottom: 1rem;
-      color: #333;
     }
-    button {
-      padding: 12px 24px;
+
+    h1 {
+      font-size: 2.2rem;
+      margin: 0;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin: 1rem 0 2rem;
+    }
+
+    .button {
+      background-color: #f5e8d8;
+      color: #0e0e0e;
+      padding: 0.9rem 1.8rem;
       font-size: 1rem;
       border: none;
       border-radius: 8px;
-      background-color: #111;
-      color: white;
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
-    button:hover {
-      background-color: #333;
+
+    .button:hover {
+      background-color: #e0d2bf;
     }
   </style>
 </head>
 <body>
-  <h1>¡Tocá el botón para abrir Ale Solano Piercing!</h1>
-  <button onclick="window.open('https://loyl.me/alesolano', '_blank')">
-    Abrir en el navegador
-  </button>
+  <img class="logo" src="https://alesolanopiercing.github.io/redireccionador/logo.png" alt="Logo Ale Solano Piercing">
+  <h1>Abrir en el navegador</h1>
+  <p>Para acceder a esta página correctamente, abrila en tu navegador predeterminado.</p>
+  <button class="button" onclick="abrirEnNavegador()">Abrir ahora</button>
+
+  <script>
+    function abrirEnNavegador() {
+      const url = "https://loyl.me/alesolano";
+      window.location.href = url;
+    }
+  </script>
 </body>
 </html>
