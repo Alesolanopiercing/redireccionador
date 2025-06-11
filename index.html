@@ -112,5 +112,14 @@
   <a class="link-button" href="https://loyl.me/alesolano" target="_blank">
     Acceder al sitio
   </a>
+
+  <script>
+    // Ocultar el botón si el usuario está en Instagram
+    const inInstagram = /instagram|fb_iab|fbav/i.test(navigator.userAgent);
+    if (inInstagram) {
+      const button = document.querySelector('.link-button');
+      if (button) button.style.display = 'none';
+    }
+  </script>
 </body>
 </html>
