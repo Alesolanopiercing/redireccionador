@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Solicita tu Tarjeta de Lealtad Retroactiva</title>
+  <title>Ale Solano Piercing</title>
 
   <!-- Fuente Cinzel Decorative para el nombre -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@
       padding: 32px;
       max-width: 600px;
       margin: auto;
-      text-align: center;
+      text-align: left;
     }
 
     .branding {
@@ -41,17 +41,35 @@
     }
 
     h1 {
-      font-size: 1.75rem;
+      text-align: center;
       margin-bottom: 1rem;
+      font-size: 1.8rem;
     }
 
-    .instructions {
+    p {
+      margin-bottom: 1.5rem;
       font-size: 1rem;
       line-height: 1.6;
-      margin-bottom: 1.5rem;
+    }
+
+    ol {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    .signature {
+      margin-top: 1.5rem;
+      font-style: italic;
+      text-align: right;
+      width: 100%;
     }
 
     .link-button {
+      margin-top: 2rem;
       display: inline-block;
       padding: 12px 24px;
       font-size: 1rem;
@@ -60,7 +78,6 @@
       color: #f4ede8;
       border: none;
       text-decoration: none;
-      cursor: pointer;
       transition: background 0.3s ease;
     }
 
@@ -75,45 +92,27 @@
     <div class="subtitulo">Piercing</div>
   </div>
 
-  <h1>¡Solicita tus Puntos de Lealtad Retroactivos!</h1>
+  <h1>¡Sigue los siguentes pasos para obtener tu tarjeta!</h1>
 
-  <p class="instructions">
-    Haz clic en el botón para abrir tu aplicación de correo con el formato ya prellenado.<br />
-    Revisa y completa los datos solicitados antes de enviarlo.
-  </p>
+  <ol>
+    <li>Toca los <strong>tres puntos</strong> en la esquina superior derecha de esta pantalla.</li>
+    <li>Selecciona la opción que dice <strong>"Abrir en Chrome"</strong> o <strong>"Abrir en el navegador"</strong>.</li>
+    <li>Tu navegador predeterminado se abrirá fuera de Instagram.</li>
+    <li>Una vez abierto, toca el botón <strong>"Acceder al sitio"</strong> para continuar.</li>
+  </ol>
 
-  <a id="emailLink" class="link-button" target="_blank" rel="noopener">
-    Enviar solicitud
+  <p class="signature">—Atentamente, Ale.</p>
+
+  <a class="link-button" href="https://loyl.me/alesolano" target="_blank">
+    Acceder al sitio
   </a>
 
   <script>
-    const to = "josea0499.js@gmail.com";
-    const subject = encodeURIComponent("Solicitud de Puntos de Lealtad Retroactivos.");
-    const body = encodeURIComponent(`Hola,
-
-
-1. Nombre completo y número de cédula:
-- [Llenar aquí]
-
-2. Captura de pantalla del QR de tu perfil de cliente - (Obtener en: https://loyl.me/alesolano)
-- [Llenar aquí]
-
-3. Lista de servicios previos en el formato del siguiente ejemplo - (Ejemplo: “downsize del nostril con joya de titanio, abril 2024”)
-- [Llenar aquí]
-
-
-Referencias (opcional):
-
-1. Nombre de la persona referida o de quién te refirió:
-- [Llenar aquí]
-
-2. Fecha aproximada del servicio de la persona:
-- [Llenar aquí]
-
-
-¡Gracias!`);
-
-    document.getElementById("emailLink").href = `mailto:${to}?subject=${subject}&body=${body}`;
+    const inInstagram = /instagram|fb_iab|fbav/i.test(navigator.userAgent);
+    if (inInstagram) {
+      const button = document.querySelector('.link-button');
+      if (button) button.style.display = 'none';
+    }
   </script>
 </body>
 </html>
